@@ -5,3 +5,9 @@
   height: 100px;
   margin: 0 auto;
 }
+.slick-slider .slick-dots {
+  top: 380px;
+}
+.slick-dots li button:before {
+  scale: 2;
+}

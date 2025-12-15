@@ -1,6 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono, Edu_SA_Beginner } from "next/font/google";
 
+import "./globals.css";
+import Navbar from "./Header/page";
+const edusa = Edu_SA_Beginner({
+  variable: "--font-edusa-sans",
+  subsets: ["latin"],
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,11 +35,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className=""
-      >
-        {children}
-      </body>
+      <body className="">
+        <Navbar/>
+        {children}</body>
     </html>
   );
 }
