@@ -7,66 +7,82 @@ const page = () => {
     {
       img: "starlink1.png",
       name: "Starlink",
+      href : 'Starlink',
     },
     {
       img: "geyser2.png",
-      name: "water-Heater",
+      name: "Water Heater",
+      href : 'water-Heater',
     },
     {
       img: "drone3.png",
       name: "Drone",
+      href : 'Drone',
     },
     {
       img: "gimbal4.png",
       name: "Gimbal",
+      href : 'Gimbal',
     },
     {
       img: "tablet5.png",
       name: "Table PC",
+      href : 'Tablet-pc',
     },
     {
       img: "tv6.png",
       name: "TV",
+      href : 'TV',
     },
     {
       img: "mobile7.png",
       name: "Mobile Phone",
+      href : 'Mobile',
     },
     {
       img: "mobile8.png",
       name: "Mobile Accessories",
+      href : 'Mobile-Items',
     },
     {
       img: "Portable9.png",
       name: "Portable SSd",
+      href : 'Portable-ssd',
     },
     {
       img: "portable10.png",
       name: "WIFI Camera",
+      href : 'Wifi-Camera',
     },
     {
       img: "trimmer11.png",
       name: "Trimmer",
+      href : 'Trimmer',
     },
     {
       img: "smart12.png",
       name: "Smart Watch",
+      href : 'Smart-watch',
     },
     {
       img: "action13.png",
       name: "Action Camera",
+      href : 'Action-Camera',
     },
     {
       img: "earbuds14.png",
       name: "Earbuds",
+      href : 'Earbuds',
     },
     {
       img: "bt15.png",
       name: "Bluetooth Speakers",
+      href : 'Bluetooth-Speakers',
     },
     {
       img: "gaming16.png",
       name: "Gaming Console",
+      href : 'Gaming-console',
     },
   ];
   return (
@@ -81,7 +97,8 @@ const page = () => {
       </div>
       <div className=" grid grid-cols-8 mt-[50px] gap-[25px]">
         {Catagories.map((item, i) => (
-          <div
+          <Link key={i} href={`${item.href}`}>
+         <div
             key={i}
             className="grid justify-center items-center px-[10px] w-[160px] h-[100px] hover:text-[#ff5100] hover:font-[500]"
           >
@@ -97,7 +114,9 @@ const page = () => {
             <h2 className=" w-[160px] text-center  cursor-pointer">
               {item.name}
             </h2>
-          </div>
+          </div>   
+          </Link>
+          
         ))}
       </div>
     </div>

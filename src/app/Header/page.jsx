@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaGift } from "react-icons/fa";
@@ -10,7 +11,9 @@ const page = () => {
       <header className=" h-[70px] bg-[#cccaca] text-[white] bg-[rgb(0,1,32)]">
         <div className="container">
           <nav className="h-[70px] flex items-center justify-between">
+          <Link href={"/"}>
             <h1 className={` text-[#ffffff] text-[30px] font-[600] px-[10px]`}>Teach</h1>
+          </Link>
             <div className=" flex items-center bg-[#fffefe] h-[40px] w-[550px] rounded-[5px] overflow-hidden">
               <input
                 className="w-[500px] h-[40px] pl-[10px] outline-none focus:outline-none text-[black] font-[500]"
