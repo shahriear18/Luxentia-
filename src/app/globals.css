@@ -11,3 +11,14 @@
 .slick-dots li button:before {
   scale: 2;
 }
+/* Webkit ব্রাউজার (Chrome, Safari) এর জন্য */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Mozilla Firefox এর জন্য */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
