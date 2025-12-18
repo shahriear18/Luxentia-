@@ -218,7 +218,7 @@ const page = () => {
     },
   ];
   return (
-    <div className=" grid grid-cols-4 gap-3">
+    <div className=" grid grid-cols-4 gap-10">
       {
         carts.map((item,i) =>(
       <div key={i} className=" w-[250px]">
@@ -246,7 +246,7 @@ const page = () => {
             </li>
           </ul>
         </div>
-        <div className=" flex items-center justify-center text-[18px] gap-5 font-[600]">
+        <div className=" flex items-center justify-center text-[18px] gap-10 font-[600]">
         <p className=" text-[red]">{item.isavailable? item.price : "Upcoming"}</p>
         <del className=" text-[14px] text-[#5a5959]">{item.isavailable? item.discount : ''}</del>
       </div>
