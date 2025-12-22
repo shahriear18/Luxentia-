@@ -1,7 +1,8 @@
-
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import toast, { Toaster } from "react-hot-toast";
 const page = () => {
   let carts = [
     {
@@ -257,7 +258,9 @@ const page = () => {
       isavailable: false,
     },
   ];
-
+  let handlepreorder = () =>{
+    toast.success('We will notify you');
+  }
   return (
     <div className=" container">
       <div className=" border border-b-1 border-t-0 border-l-0 border-r-0 py-[20px] border-[#c0bebe]">
@@ -343,9 +346,11 @@ const page = () => {
                 </del>
               </div>
               <div className=" flex justify-center mt-[20px] font-[600] text-[13px] gap-3">
-                <button className="cursor-pointer text-[white] px-[20px] bg-[#0044ffb4] py-[5px] rounded-[5px]">
-                  {item.isavailable ? "Buy now" : "Pre order"}
-                </button>
+                {item.isavailable ?(
+                <button className="cursor-pointer text-[white] px-[20px] bg-[#0044ffb4] py-[5px] rounded-[5px]">Buy Now</button>)
+                :
+                (<button onClick={handlepreorder} className="cursor-pointer text-[white] px-[20px] bg-[#0044ffb4] py-[5px] rounded-[5px]">Pre Order</button>)
+                }
                 <button
                   style={{
                     display: item.isavailable ? "block" : "none",

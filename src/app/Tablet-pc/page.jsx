@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { Toaster } from 'react-hot-toast';
 import { FaAngleUp } from "react-icons/fa6";
 const page = () => {
 let carts = [
@@ -500,6 +501,10 @@ let carts = [
   let [option7,setoption7] = useState(true);
   return (
     <div className=' container'>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       <div className=' border border-b-1 border-t-0 border-l-0 border-r-0 py-[20px] border-[#c0bebe]'>
         <h1 className=' font-[600] text-[25px] text-[#0404be]'>Tablet Price in Bangladesh</h1>
         <h2 className=' text-[13px] mt-[10px]'>Tablet price starts from BDT 9,990 to BDT 270,000 in Bangladesh, depending on brand, model, and features. Buy the Latest Tablet PC from Star Tech online shop. Browse below and order yours now!!</h2>

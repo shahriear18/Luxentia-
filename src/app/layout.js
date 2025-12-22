@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Edu_SA_Beginner } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "./Header/page";
+import { Toaster } from "react-hot-toast";
 const edusa = Edu_SA_Beginner({
   variable: "--font-edusa-sans",
   subsets: ["latin"],
@@ -37,6 +38,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="">
         <Navbar/>
+        <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         {children}</body>
     </html>
   );
